@@ -66,6 +66,15 @@ public class NumberStatCounterProgramme {
 		    System.out.println();
 		    // End Of Section 1
 		    
+		    // Section 1.5
+		    System.out.println("For Number Reference");
+		    for(int i=0; i<10; i++) 
+		    {
+		    System.out.println(numStat[i]);	
+		    }
+		    System.out.println();
+		    // End Of Section 1.5
+		    
 		    // Section 2 - Calculate Overall Score
 		    System.out.println("Number Overall Stat");
 		    for(int i=0;i<23;i++) {

@@ -50,6 +50,7 @@ public class NumberStatReference {
 		        String line = scanner.nextLine(); // get the number from the line
 		        // retrieve the number and store at  numStat
 		        numStat[lineNum] = Integer.parseInt(line);
+		        System.out.println("Number Stats " +lineNum + ": " + line);
 		        lineNum++; 
 		    }
 		    
@@ -68,7 +69,7 @@ public class NumberStatReference {
 	        System.out.println();
 	
 	        file = new File("src/"+filename+".txt");
-	        System.out.println("Number Stats");
+	        System.out.println("Number");
 	        try {
 	        	scanner = new Scanner(file);
 
@@ -79,6 +80,7 @@ public class NumberStatReference {
 	        String line = scanner.nextLine(); // get the number from the line
 	        // extracting the number
 	        overallNumber[lineNum] = Integer.parseInt(line);
+	        System.out.println(line);
 	        lineNum++; 
 	    }
 	    
@@ -99,6 +101,12 @@ public class NumberStatReference {
 	    	    int k = Character.digit(tempnumber.charAt(j), 10); // get digit from each string
 	    	    // use the k value to add to overallstate using the table
 	    	    overallNumberStat[i] += numStat[k];
+	    	    
+	    	    // if Zero Appear at the front
+	    	    if(j==0&&tempnumber.length()==3) 
+	    	    {
+	    	    	overallNumberStat[i] += numStat[0];
+	    	    }
 	    	    //System.out.println("digit: " + k);
 	    	}
 	    	System.out.println("Number "+ overallNumber[i] + " - " +overallNumberStat[i]);

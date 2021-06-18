@@ -84,6 +84,12 @@ public class NumberStatCounterProgramme {
 		    	    int k = Character.digit(tempnumber.charAt(j), 10); // get digit from each string
 		    	    // use the k value to add to overallstate using the table
 		    	    overallNumberStat[i] += numStat[k];
+		    	    
+		    	    // if Zero Appear at the front
+		    	    if(j==0&&tempnumber.length()==3) 
+		    	    {
+		    	    	overallNumberStat[i] += numStat[0];
+		    	    }
 		    	    //System.out.println("digit: " + k);
 		    	}
 		    	System.out.println("Number "+ overallNumber[i] + " - " +overallNumberStat[i]);

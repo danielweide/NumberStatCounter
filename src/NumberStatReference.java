@@ -107,7 +107,15 @@ public class NumberStatReference {
 		
 		
 		// Section 3 - Get Overall Average
-		
+	    System.out.println("Number Average");
+	    double avgNum =0;
+	    for(int i=0;i<23;i++) {
+	    	avgNum += overallNumberStat[i];
+	    }
+	    // average out the number
+	    avgNum = avgNum/23;
+	    System.out.println("The average Stats is : " +avgNum);
+	    
 		// End of Section 3
 	}catch(FileNotFoundException e) { 
 	    //handle this

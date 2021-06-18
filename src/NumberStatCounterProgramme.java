@@ -53,10 +53,19 @@ public class NumberStatCounterProgramme {
 		    	}
 		    	System.out.println("Number "+ overallNumber[i] + " - " +overallNumberStat[i]);
 		    }
-		    
+		    	System.out.println();
 		    // End Of Section 2
 		    
-		    // Section 
+		    // Section 3 overall average
+		    System.out.println("Number Average");
+		    double avgNum =0;
+		    for(int i=0;i<23;i++) {
+		    	avgNum += overallNumberStat[i];
+		    }
+		    // average out the number
+		    avgNum = avgNum/23;
+		    System.out.println("The average Stats is : " +avgNum);
+		    
 		    
 		} catch(FileNotFoundException e) { 
 		    //handle this

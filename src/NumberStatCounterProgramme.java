@@ -1,10 +1,26 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class NumberStatCounterProgramme {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		
+		System.out.print("Input Date :");
+		 BufferedReader reader = new BufferedReader(
+		            new InputStreamReader(System.in));
+		 
+		        // Reading date using readLine
+		        String date = reader.readLine();
+		 
+		        // Printing the read line
+		        System.out.println("Date :" + date);
+		        System.out.println();
+		        
+		
 		File file = new File("src/Sample.txt");
 		System.out.println("Number Stats");
 		try {

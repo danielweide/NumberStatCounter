@@ -20,8 +20,18 @@ public class NumberStatCounterProgramme {
 		        System.out.println("Date :" + date);
 		        System.out.println();
 		        
+		 System.out.print("input filename :");
+		 reader = new BufferedReader(
+		            new InputStreamReader(System.in));
+		 
+		        // Reading date using readLine
+		        String filename = reader.readLine();
+		 
+		        // Printing the read line
+		        System.out.println("filename :" + filename);
+		        System.out.println();
 		
-		File file = new File("src/Sample.txt");
+		File file = new File("src/"+filename+".txt");
 		System.out.println("Number Stats");
 		try {
 		    Scanner scanner = new Scanner(file);
